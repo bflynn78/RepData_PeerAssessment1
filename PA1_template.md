@@ -144,7 +144,7 @@ hist(imputedSumStepsByDay,
      las=1, 
      breaks=25)
 ```
-![Total Number of Steps Taken Per Day with (Imputed) Values.](figure/hist1.png)
+![Total Number of Steps Taken Per Day with (Imputed) Values.](figure/hist2.png)
 ***
 
 ###### The distribution with imputed values appears much more normalized. 

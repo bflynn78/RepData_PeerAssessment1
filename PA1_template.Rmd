@@ -50,7 +50,7 @@ hist(sumStepsByDay,
      breaks=25)
 
 ```
-
+![Total Number of Steps Taken Per Day Histogram.](figure/hist1.png)
 ##### 3. Calculate and report the mean and median number of steps taken per day.
 
 ```{r}
@@ -82,7 +82,9 @@ tsChart <- ggplot(as.data.frame(averageStepsByDayInterval),
                  ylab("Average Number of Steps Per Interval")
 tsChart + geom_line()
 
-```   
+```
+![Personal Activities Timeseries Chart (missing values)](figure/ts1.png)
+
 ######Note: Timeseries value 500 is equivalent to 05:00 AM.  2000 = 08:00 PM.
 
 ##### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -142,6 +144,7 @@ hist(imputedSumStepsByDay,
      las=1, 
      breaks=25)
 ```
+![Total Number of Steps Taken Per Day with (Imputed) Values.](figure/hist2.png)
 ***
 
 ###### The distribution with imputed values appears much more normalized. 
@@ -279,5 +282,5 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
 multiplot(ts1, ts2)
 
 ```
-
+![Personal Activities Timeseries Chart (missing values)](figure/ts2.png)
 ##### When reviewing the timeseries charts it becomes apparent that the individual who particpated in study the appears to be more active on the weekends. However, one can also deduce that the individual is most liking to walk more each day before 10:00 AM. 

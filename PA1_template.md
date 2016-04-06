@@ -30,7 +30,7 @@ if (file.exists(zip_filename) & !file.exists(csv_filename)) {
 personalActivities <- read.csv(csv_filename)
 ```
 
-## What is mean total number of steps taken per day?
+## What is the total number of steps taken per day?
 
 ##### 1. Calculate the total number of steps taken per day
 ```{r}
@@ -61,8 +61,8 @@ medianStepsByDay <- median(sumStepsByDay)
 ```
 ***
 
-* Mean number of steps per day: `r meanStepsByDay`
-* Median number of steps per day:  `r medianStepsByDay`
+* Mean number of steps per day: `r meanStepsByDay`  (9354.2295082)
+* Median number of steps per day:  `r medianStepsByDay`  (10395)
 
 ***
 
@@ -106,7 +106,7 @@ if (l < 4) { #example: 635
 
 ```
 
-* The most steps occured at: `r format(strptime(time, '%H:%M'), '%I:%M %p')`
+* The most steps occured at: `r format(strptime(time, '%H:%M'), '%I:%M %p')`  ( 08:35 AM)
 
 ## Imputing missing values
 
@@ -115,7 +115,7 @@ if (l < 4) { #example: 635
 missingValuesCount <- sapply(personalActivities, function(x) sum(is.na(x)));
 ```
 
-* Number of missing values: `r missingValuesCount[1]`
+* Number of missing values: `r missingValuesCount[1]` (2304)
 
 ***
 
@@ -162,8 +162,8 @@ imputedMedianStepsByDay <- median(imputedSumStepsByDay)
 
 ***
 
-* Imputed Mean number of steps per day: `r imputedMeanStepsByDay`
-* Imputed Median number of steps per day:  `r imputedMeanStepsByDay`
+* Imputed Mean number of steps per day: `r imputedMeanStepsByDay` (1.076618910^{4})
+* Imputed Median number of steps per day:  `r imputedMeanStepsByDay` (1.076618910^{4})
 
 ***
 
@@ -183,8 +183,8 @@ medianDifference <- percent(medianStepsByDay/imputedMedianStepsByDay)
 ```
 -----
 
-* Mean   Difference Percentage with Imputed Values: `r meanDifference`
-* Median Difference Percentage with Imputed Values: `r medianDifference`
+* Mean   Difference Percentage with Imputed Values: `r meanDifference`  (86.89%)
+* Median Difference Percentage with Imputed Values: `r medianDifference` (96.55%)
 
 -----
 
@@ -192,7 +192,7 @@ medianDifference <- percent(medianStepsByDay/imputedMedianStepsByDay)
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-##### Below is code to seperate the imputed dataset with two levels - "weekday" and "weekend".  The panel plot contains a time series plot of the 5-minute intervals on the (x-axis) and the average number of steps taken, averaged across all weekdays and weekends.
+##### Below is code to separate the imputed dataset with two levels - "weekday" and "weekend".  The panel plot contains a time series plot of the 5-minute intervals on the (x-axis) and the average number of steps taken, averaged across all weekdays and weekends.
 
 ```{r}
 

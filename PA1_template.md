@@ -188,7 +188,7 @@ medianDifference <- percent(medianStepsByDay/imputedMedianStepsByDay)
 
 -----
 
-######It seems apparent that by filling in the missing values with the average daily steps there was a significant impact to the left side data distribution shown in the second histogram. Both the mean and median difference was quite different. Overall it appears that using the daily average to fill in the missing value for this dataset indeed is faily good method for normalizing the data. 
+######It seems apparent that by filling in the missing values with the average daily steps there was a significant impact to the left side data distribution shown in the second histogram. Both the mean and median difference was quite different. Overall it appears that using the daily average to fill in the missing value for this dataset indeed is a fairly good method for normalizing the data. 
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
